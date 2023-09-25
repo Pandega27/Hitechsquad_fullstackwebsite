@@ -1,0 +1,28 @@
+<!-- /* RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023B
+Assessment: Assignment 2
+Author: Abhinaya Bimata Pandega , Santoso David , Tran Pham Quoc Vy , Rybak Polina , Grigory Kovtun 
+ID: S3963166, S3824107, S4011912, S3969997, S3927476 
+Acknowledgement: */ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Product Confirmation</title>
+</head>
+<body>
+    <h1>Delete Product Confirmation</h1>
+    <p>Are you sure you want to delete the product with ID <%= productId %>?</p>
+    
+    <!-- Add a form for confirming the deletion -->
+    <form method="POST" action="/vendor/deleteProduct/<%= productId %>">
+        <button type="submit">Confirm Delete</button>
+    </form>
+    
+    <!-- Add a link to cancel the deletion and go back -->
+    <a href="/">Cancel</a>
+</body>
+</html>

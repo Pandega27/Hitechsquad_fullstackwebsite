@@ -1,0 +1,116 @@
+<!-- /* RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023B
+Assessment: Assignment 2
+Author: Abhinaya Bimata Pandega , Santoso David , Tran Pham Quoc Vy , Rybak Polina , Grigory Kovtun 
+ID: S3963166, S3824107, S4011912, S3969997, S3927476 
+Acknowledgement: */ -->
+
+
+<link rel="stylesheet" href="/css/homepage.css">
+
+
+<section class="productpage">
+  <div class="category">
+    <div class="">
+      <div class="hello">
+        <div class="">
+          <br>
+          <br>
+          <h6 class="product">Our Shop Category</h6>
+          <%const categorieslength=Object.keys(categories).length%>
+            <% if(categorieslength==0){ %>
+              <span></span>
+              <% } else{ %>
+                <% } %>
+        </div>
+        <ul id="product-categories ">
+          <% for(let key in categories) { %>
+            <li><a class="product" id="button" href=/category/<%=key%>><%=categories[key]%></a></li>
+            <% } %>
+        </ul>
+      </div>
+    </div>
+    <div class="split">
+      <% if(displayBreadcrumb) { %>
+        <nav aria-label="breadcrumb">
+          <ol class="bread">
+            <li class="bread">
+              <a class="bread" href="/">
+                Home
+              </a>
+            </li>
+            <li class="bread" aria-current="page">
+              <a class="bread" href="#">
+                <%=categoryName%>
+              </a>
+            </li>
+          </ol>
+        </nav>
+        <%}%>
+
+
+    </div>
+  </div>
+  </form>
+  </div>
+
+  <div class="container" id="product-lists">
+    <% if (products.length> 0) { %>
+      <% products.forEach((product)=> { %>
+        <div class="product-card">
+          <div class="productmain" height="">
+            <img class="productimage"
+              src="data:<%= product.image.contentType %>;base64,<%= product.image.data.toString('base64') %>"
+              alt="Product Image" />
+            <div class="details">
+              <div class="">
+                <h5 class="productdetails">
+                  <%=product.name%>
+                </h5>
+                <div class="price">$<%=product.price%>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="viewproduct">
+                <a class="viewproduct" href="/product/<%=product._id%>">View product</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <% }); %>
+          <% } else { %>
+            <!-- No products to display -->
+            <% } %>
+  </div>
+  <div class="" id="">
+    <form id="search-form" method="get" enctype="multipart/form-data">
+      <div class="search">
+        <div class=""><input id="search-box" type="text" placeholder="Search Your Item Type" aria-label="Search"
+            aria-describedby="search-addon"></div>
+        <div class="" id="s-cover">
+          <button id="search-button" type="submit">
+            <div id="s-circle"> Search</div>
+          </button>
+        </div>
+      </div>
+      <div class="footer" id="navbarfooter">
+        <ul class="footer">
+          <li class="footer">
+            <a class="footer-link"> Copyright</a>
+          </li>
+          <li class="footer">
+            <a href="/about" class="footer-link">
+              About
+            </a>
+          </li>
+          <li class="footer">
+            <a class="footer-link"> Privacy </a>
+          </li>
+          <li class="footer">
+            <a class="footer-link"> Help !</a>
+          </li>
+        </ul>
+      </div>
+</section>

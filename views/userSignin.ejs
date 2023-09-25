@@ -1,0 +1,65 @@
+<!-- /* RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023B
+Assessment: Assignment 2
+Author: Abhinaya Bimata Pandega , Santoso David , Tran Pham Quoc Vy , Rybak Polina , Grigory Kovtun 
+ID: S3963166, S3824107, S4011912, S3969997, S3927476 
+Acknowledgement: */ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <title>Customer Log-in</title>
+  <link rel="icon" type="image/x-icon" href="/css/logo.png" alt="logo">
+</head>
+ 
+<body>
+  <div class="customer">
+    <div class="login">
+      <% if (message) { %>
+        <div class="">
+          <%= message %>
+        </div>
+        <% } %>
+          <form method="POST" action="/user/signin/">
+            <img src="/css/logo.png">
+            <h1> Hello There <br> Welcome Back !</h1>
+            <div class="form-group">
+              <label class="form-label" for="text"></label>
+              <input class="form-control" type="text" name="username" id="username" required placeholder="Enter your Username" />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="password"></label>
+              <input class="form-control" type="password" name="password" id="password" required placeholder="Password"/>
+            </div>
+            <div class="form-group form-check">
+              <input class="form-check-input" type="checkbox" id="check" />
+              <label class="form-check-label" for="check">Remember me</label>
+            </div>
+            <input class="btn" type="submit" name="submit" value="LOG IN" />
+            <br>
+            <br>
+            <a class="btn" a href="/vendor/signin/">Vendor Log In</a>
+            <a class="btn" a href="/shipper/signin/">Shipper Log In</a>
+            <br>
+            <nav class="">
+              <a class="" aria-current="page" href="/user/signup/">No account yet? Getstarted</a>
+            </nav>
+            <br>
+          </form>
+    </div>
+  </div>
+
+<!---- Footer ---->
+<div class="footer">
+  <p> © 2023 Lazada HitechSquad</p>
+</div>    
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

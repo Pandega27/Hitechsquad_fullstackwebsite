@@ -1,0 +1,94 @@
+<!-- /* RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023B
+Assessment: Assignment 2
+Author: Abhinaya Bimata Pandega , Santoso David , Tran Pham Quoc Vy , Rybak Polina , Grigory Kovtun 
+ID: S3963166, S3824107, S4011912, S3969997, S3927476 
+Acknowledgement: */ -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Shipper Sign-up</title>
+    <link rel="icon" type="image/x-icon" href="/css/logo.png" alt="logo">
+  </head>
+
+  <body>
+    <div class="customer">
+      <div class="login">
+        <% if (message) { %> <% if (messageType==='success' ) { %>
+        <p class=""><%= message %></p>
+        <% } else if (messageType==='error' ) { %>
+        <p class=""><%= message %></p>
+        <% } %> <% } %>
+        <form id="form-group" method="POST" action="/shipper/signup/">
+          <img src="/css/logo.png">
+          <div class="form-group">
+            <h1> Shipper Sign up!</h1>
+            <label class="form-label" for="username"></label>
+            <input
+              class="form-control"
+              name="username"
+              type="text"
+              id="username"
+              placeholder="Shipper Username: (min 8 character)" 
+            />
+            <small class=""></small>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="password"></label>
+            <input
+              class="form-control"
+              name="password"
+              type="password"
+              id="password"
+              placeholder="Password" 
+            />
+            <small class=""></small>
+          </div>
+          <div class="form-group">
+            <label class="form-label" label for="distributionHub"></label>
+            <select
+              id="distributionHub"
+              name="distributionHub"
+              class="form-control"
+              placeholder="Distribution Hub" 
+            >
+              <option value="GHTK">GHTK</option>
+              <option value="GHN">GHN</option>
+              <option value="AHAMOVE">AHAMOVE</option>
+              <option value="GRABEXPRESS">GRAB EXPRESS</option>
+            </select>
+          </div>
+          <br>
+          <input type="hidden" name="isShipper" value="true" />
+          <input
+            class="btn"
+            type="submit"
+            name="signup"
+            value="SIGN UP"
+          />
+          <br>
+          <br>
+          <a class="btn" a href="/shipper/signin/">Shipper Login</a>
+          <a class="btn" a href="/vendor/signin/">Vendor Login</a>
+          <br>
+          <a class="" aria-current="page" href="/user/signin/">Back to login page</a>
+        </form>
+      </div>
+    </div>
+
+<!---- Footer ---->
+<div class="footer">
+  <p> © 2023 Lazada HitechSquad</p>
+</div>     
+    <script src="/js/shipperSignupValidator.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

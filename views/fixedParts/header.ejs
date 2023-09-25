@@ -1,0 +1,67 @@
+<!-- /* RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023B
+Assessment: Assignment 2
+Author: Abhinaya Bimata Pandega , Santoso David , Tran Pham Quoc Vy , Rybak Polina , Grigory Kovtun 
+ID: S3963166, S3824107, S4011912, S3969997, S3927476 
+Acknowledgement: */ -->
+
+<header class="">
+  <link rel="stylesheet" href="/css/homepage.css" />
+  <nav class="">
+    <div class="header">
+      <a href="/" class="logo">
+        <img src="/css/logo1.png">
+      </a>
+      <div class="head" id="navbarNav">
+        <ul class="">
+          <li class="">
+            <a href="/" class="nav-link">
+              </i>Home
+            </a>
+          </li>
+        </ul>
+
+        <ul class="head" id="menu123">
+          <% switch (user.type) {
+            case 'user': %>
+          <%break;
+            case 'vendor': %>
+            <li class="">
+              <a href="/vendor/addProduct/" class="nav-link" style="width: max-content !important;">Add product</a>
+            </li>
+          <%    break;
+            case 'shipper': %>
+            <li class="">
+              <a href="/shipper/dashboard" class="nav-link">Dashboard</a>
+            </li>
+          <%    break;
+            default: %>
+          <% } %>
+
+          <li class="nav-item dropdown active" style="padding-left: 20px !important;">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"="dropdown" aria-haspopup="true" aria-expanded="false">
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+               <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+               <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+             </svg>
+             <%=user.username %>
+           </a>
+           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+             <a class="dropdown-item" href="/profile/">Profile</a>
+             <a class="dropdown-item" href="/logout/">Logout</a>
+           </div>
+        </li>
+      <hr>
+          <li class="">
+            <a href="/cart/" class="nav-link">
+              Cart(<%=cart.length %>)
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="title">
+      <marquee><h3 class="title"> Shop Now! Shop Now! Shop Now!</h3></marquee>
+    </div>
+

@@ -1,0 +1,110 @@
+<!-- /* RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023B
+Assessment: Assignment 2
+Author: Abhinaya Bimata Pandega , Santoso David , Tran Pham Quoc Vy , Rybak Polina , Grigory Kovtun 
+ID: S3963166, S3824107, S4011912, S3969997, S3927476 
+Acknowledgement: */ -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Shipper Homepage</title>
+<%- include('fixedParts/head.ejs') %>
+  <link href="/css/shipperdash.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" />
+  </head>
+
+<body>
+  <%- include('fixedParts/header.ejs') %>
+  </header>
+
+  <div class="">
+    <div class="">
+        <div class="">
+            <img src="/css/logo.png" class="image">
+            <h5 class="header">All(<%=orderedProducts.length%>)</h5>
+
+            <div class="">
+                <hr>
+                <% orderedProducts.forEach((product) =>{ %>
+                    <div class="">
+                        <div class="product">
+                            <img
+                            src="data:<%= product.image.contentType %>;base64,<%= product.image.data.toString('base64') %>"
+                            alt="Product Image" height="300px" width="300px" class="prod"/>
+                        </div>
+                        
+                        <div class="">
+                            <h5 class=""><%=product.vendor%></h5>
+                            <div class="detail">
+                                <p class="">(Phone number)</p>
+                                <p class="">(Address)</p>
+                            </div>
+                        </div>
+                    <a href="/shipper/dashboard/view/<%=product._id%>" type="button" class="details">View Details</a>
+                    <hr>
+                    </div>
+                  <% }); %>
+            </div>
+        </div>
+
+        <% let productData = activeProduct %>
+
+        <% if (!activeProduct) { %>
+        <% if (orderedProducts.length > 0) { %>
+        <% productData = orderedProducts[0]; %>
+        <% } else { %>
+        <h5 class="no-order">No ordered products</h5>
+        <% } %>
+        <% } %>
+
+        <% if(productData){ %>
+            <div class=""> 
+            <div class="confirm">
+                <h5>Name</h5>
+                <p>Phone number</p>
+                <p>Address</p>
+            </div>
+            <div class="">
+                <hr>
+            </div>
+            <div class="confirm">
+                <h5><%=productData.name%></h5>
+                <p>$<%=productData.price%></p>
+                <p>Status: Active</p>
+            </div>
+            <div class="shipping">
+                <a href="/shipper/dashboard/delivered/<%=productData._id%>" type="button" class="delivery">Delivered the product</a>
+                <a href="/shipper/dashboard/cancel/<%=productData._id%>" type="button" class="cancel">Cancel</a>
+            </div>
+        </div>
+      <%  } %>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+<!-- Core theme JS-->
+<script src="/js/scripts.js"></script>
+<div class="footer" id="navbarfooter">
+  <ul class="footer">
+    <li class="footer">
+      <a class="footer-link"> Copyright</a>
+    </li>
+    <li class="footer">
+      <a href="/about" class="footer-link">
+        About
+      </a>
+    </li>
+    <li class="footer">
+      <a class="footer-link"> Privacy </a>
+    </li>
+    <li class="footer">
+      <a class="footer-link"> Help !</a>
+    </li>
+  </ul>
+</div>
+</body>
+</html>
