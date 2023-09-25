@@ -1,0 +1,23 @@
+/* RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023B
+Assessment: Assignment 2
+Author: Abhinaya Bimata Pandega , Santoso David , Tran Pham Quoc Vy , Rybak Polina , Grigory Kovtun 
+ID: S3963166, S3824107, S4011912, S3969997, S3927476 
+Acknowledgement: */
+
+.body img{
+    margin-left: 38%;
+    margin-top: 0.5%;
+}
+.body p{
+    margin-top: -1%;
+}
+img.logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}

@@ -1,0 +1,99 @@
+/* RMIT University Vietnam
+Course: COSC2430 Web Programming
+Semester: 2023B
+Assessment: Assignment 2
+Author: Abhinaya Bimata Pandega , Santoso David , Tran Pham Quoc Vy , Rybak Polina , Grigory Kovtun 
+ID: S3963166, S3824107, S4011912, S3969997, S3927476 
+Acknowledgement: */
+
+ol{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin-top: 2%;
+    padding-right: 3px;
+    margin-right: 5%;
+    color: black;
+}
+a.bread{
+    color: black;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+    text-decoration: none;
+}
+li.bread{
+    padding-right: 1px;
+    color: black;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
+}
+.image{
+    text-align: center;
+}
+img.card-img{
+    width: 550px;
+    height: 550px;
+}
+.product{
+    text-align: center;
+}
+h5.head{
+    color: black;
+    font-family: 'Roboto Slab', serif;
+    font-size: 50px;
+    font-weight: 600;
+    margin-top: 2%;
+}
+small.head{
+    color: black;
+    font-family: 'Roboto Slab', serif;
+    font-size: 40px;
+    font-weight: 600;
+}
+.button{
+    text-align: center;
+}
+b.cart{
+    margin-top: 20%;
+    margin-bottom: 5%;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: black;
+    color: black;
+    border-width: thick;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    
+}
+p.desc{
+    margin-top: 2%;
+    margin-bottom: 3%;
+    font-size: 30px;
+    width: 50%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    color: darkblue;
+}
+span.back{
+    margin-bottom: -20%;
+}
+li.delete{
+    list-style: none;
+    margin-top: 5%;
+    margin-left: 43%;
+}
+button{
+    background-color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    font-weight: 600;
+}
